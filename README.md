@@ -6,7 +6,7 @@
 
 1. **Clone & Install:**
     ```
-    git clone https://github.com/yourusername/SOC-L1-SimLab.git
+    git clone https://github.com/kartavyaojha/SOC-L1-SimLab.git
     cd SOC-L1-SimLab
     pip install -r requirements.txt
     ```
