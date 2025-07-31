@@ -16,9 +16,10 @@
     streamlit run src/dashboard.py
     ```
 
-3. **Customize Alerts:**  
+3. **Customize Alerts:**
+   ```
    Edit or add alerts in `data/alerts.csv` (format provided below).
-
+   ```
 ## **✨ Features**
 
 - **One-by-one alert triage:** Feels like a real SOC queue—handle what pops in, not a giant list dump.
