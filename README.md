@@ -68,12 +68,8 @@
 - Analyst stats dashboard (response time, accuracy, etc.)
 
 ## **💻 Data/Architecture Diagram**
-[alerts.csv] +------------------------+
-| ----> | Streamlit Dashboard |
-| +------------------------+
-| | | | |
-| | | | +------> [SOP Guide] # In-line help/docs
-| | | +---------> [Triage Panel] # Alert decisions
-| | +------------> [Ticketing] # Log actions/notes
-+---------------------------------> [tickets.csv] # Persisted logs
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-%E2%9C%94-green)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 
