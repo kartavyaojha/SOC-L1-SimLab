@@ -72,6 +72,14 @@
 ![SOC-L1 SimLab Architecture](assets/architecture-diagram.png)
 
 
+## **📄 Sample alerts.csv**
+- timestamp,source_ip,event_type,severity,description
+```
+ 2025-07-31 10:20,192.168.1.10,Brute-force,Medium,Multiple failed SSH logins
+ 2025-07-31 10:22,10.10.10.22,Malware,High,Ransomware flagged on endpoint
+ 2025-07-31 10:26,172.16.0.5,Phishing,High,Suspicious email with dangerous attachment
+```
+
 
 
 
