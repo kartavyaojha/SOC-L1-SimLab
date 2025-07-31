@@ -5,8 +5,8 @@ from datetime import datetime
 import os
 
 # File paths can be an issue if folder structure changes — consider using config or env variables later
-ALERTS_FILE = '../data/alerts.csv'
-TICKETS_FILE = '../data/tickets.csv'
+ALERTS_FILE = 'data/alerts.csv'
+TICKETS_FILE = 'data/tickets.csv'
 
 # Streamlit caching here for the alerts, as alerts won't likely change often during session
 @st.cache_data
