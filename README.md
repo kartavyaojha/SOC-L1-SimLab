@@ -69,8 +69,8 @@ timestamp,source_ip,event_type,severity,description
 
 ## **👋 Contributing / License**
 
-> **PRs welcome! Built for learning, training, and interviews. MIT License. **
-> **Built for SOC beginners — your feedback and contributions can help make it even better. **
+> PRs welcome! Built for learning, training, and interviews. MIT License. 
+> Built for SOC beginners — your feedback and contributions can help make it even better. 
 
 
 
