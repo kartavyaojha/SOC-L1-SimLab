@@ -67,7 +67,10 @@
 - Hotkeys for faster analyst flow.
 - Analyst stats dashboard (response time, accuracy, etc.)
 
-## **💻 Data/Architecture Diagram**
+## 🗺️ Architecture Diagram
+
+![SOC-L1 SimLab Architecture](assets/architecture-diagram.png)
+
 
 
 
