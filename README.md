@@ -79,7 +79,7 @@
  2025-07-31 10:22,10.10.10.22,Malware,High,Ransomware flagged on endpoint
  2025-07-31 10:26,172.16.0.5,Phishing,High,Suspicious email with dangerous attachment
 ```
-
+- For more advanced SOC scenarios, just swap the sample with the full assets/alerts.csv file. Contributions for even more alert types are welcome!
 
 
 
