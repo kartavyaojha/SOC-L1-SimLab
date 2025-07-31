@@ -26,11 +26,12 @@
 - **Ticket log:** Every action documented. Go back and review what you did.
 - **Built-in SOP cheat sheet:** Get context/recommendations for each alert or action (think “runbook quick reference”).
 - **Easy to extend:** Data in CSV, Python code is modular—modify or add your own alert types/features.
+- **Analyst stats dashboard** (response time, accuracy, etc.)
 
 **Up Next / Ideas:**
 - Gamification (“Nice triage!” or “Hmm, check best practice”)
 - Hotkeys for faster analyst flow.
-- Analyst stats dashboard (response time, accuracy, etc.)
+
 
 ## 🗺️ Architecture Diagram
 
