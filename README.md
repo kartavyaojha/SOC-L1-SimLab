@@ -1,100 +1,97 @@
-# **SOC-L1 SimLab**
+# SOC-L1 SimLab — Next-Gen Blue Team Triage Platform
 
-> **Simulate real-world L1 SOC alert triage, ticketing, and response. Build your analyst instincts with practical hands-on workflows.**
+> _From learners, for learners. Simulate true-to-life Security Operations alert investigation, documentation, and decision-making in a modern, immersive environment._
 
-## **🚀 Quick Start**
-
-1. **Clone & Install:**
-    ```
+## 🚀 Quick Start
+    
     git clone https://github.com/kartavyaojha/SOC-L1-SimLab.git
     cd SOC-L1-SimLab
     pip install -r requirements.txt
-    ```
+    python -m streamlit run .\src\dashboard.py
+    
 
-2. **Run the App:**
-    ```
-    streamlit run src/dashboard.py
-    ```
+## 🖥️ What Is It?
 
-3. **Customize Alerts:**
-   ```
-   Edit or add alerts in `data/alerts.csv` (format provided below).
-   ```
-## **✨ Features**
+A serious, hands-on platform to:
+- **Practice real SOC L1 investigative skills:** Each incident is a unique card, not a gamified pop quiz.
+- **Experience uncertainty:** You’ll see ambiguous, real-world events—no answer is obvious.
+- **Act like a true analyst:** Triage, dive deep, research context, log decisions with notes.
 
-- **One-by-one alert triage:** Feels like a real SOC queue—handle what pops in, not a giant list dump.
-- **Actions:** Escalate, close as false positive, or request more info—each action opens a ticket with your notes.
-- **Ticket log:** Every action documented. Go back and review what you did.
-- **Built-in SOP cheat sheet:** Get context/recommendations for each alert or action (think “runbook quick reference”).
-- **Easy to extend:** Data in CSV, Python code is modular—modify or add your own alert types/features.
-- **Analyst stats dashboard** (response time, accuracy, etc.)
+## ✨ Features
 
-**Up Next / Ideas:**
-- Gamification (“Nice triage!” or “Hmm, check best practice”)
-- Hotkeys for faster analyst flow.
+- **🔻 Modern "War Room" Dashboard:** See all active incidents in an intense, card-based grid—severity color-coded, hacker-terminal fonts, and dark cyberpunk/CTF-inspired style.
+- **🌗 Deep Investigation Workflow:** Every alert leads to its own investigation portal—an environment for decisive action and real research.
+- **📚 Authentic Details:** Each event includes contextual fields (_IPs, users, asset, logs, detection source, etc._), not just trivial clues—and never leaks the answer.
+- **✅ Ticketing & Feedback:** All analyst actions are logged, with instant accuracy feedback (after, never before).
+- **📈 Progress Tracking:** Dedicated dashboard: see triaged, accuracy stats, and push your analyst instincts further.
+- **📋 Clean Ticket Log:** Review your decisions and learning from prior cases.
+- **👾 “About the Maker” & Terminal Bio:** Professional, cyberpunk, and terminal-style about pages showcase the project origins, for the community, by the community.
 
-
-## 🗺️ Architecture Diagram
-
-![SOC-L1 SimLab Architecture](assets/architecture-diagram.png)
-
-
-## **📄 Sample alerts.csv**
-- timestamp,source_ip,event_type,severity,description
-```
-timestamp,source_ip,event_type,severity,description
-2025-07-31 10:00,192.168.1.100,Brute-force,Medium,20+ failed SSH logins in under 2 mins, same source IP
-2025-07-31 10:05,10.0.0.5,Port Scan,Low,Scan on ports 22, 80, 3389 flagged by IDS
-2025-07-31 10:10,172.16.0.10,Malware Detected,High,AV flagged trojan.gen on user machine – quarantined
-2025-07-31 10:15,192.168.1.150,Suspicious Login,Medium,VPN login from Brazil—user usually logs in from Pune
-2025-07-31 10:20,203.0.113.25,Phishing Email,High,User clicked link in mail claiming to be from “IT Helpdesk”
-2025-07-31 10:25,198.51.100.50,Data Exfiltration Attempt,Critical,Large upload to external IP via HTTP from dev machine
-2025-07-31 10:30,10.0.0.10,Privilege Escalation,High,Powershell run with admin rights by non-admin user
-2025-07-31 10:35,192.168.1.200,Ransomware Activity,Critical,File renames with .encrypted extension in Documents folder
-2025-07-31 10:40,203.0.113.8,Suspicious DNS Query,Medium,Query to known-bad domain (from threat intel list)
-2025-07-31 10:45,172.16.0.20,Unauthorized Access,High,RDP login attempt to finance server by disabled account
-2025-07-31 10:50,198.51.100.99,Web Shell Detected,High,cmd.php found in webroot, triggered reverse shell pattern
-2025-07-31 10:55,192.168.1.105,Malicious Script Execution,Medium,Script started by user from Downloads folder trying outbound request
-2025-07-31 11:00,10.0.0.21,Failed MFA Attempt,Medium,Multiple failed MFA attempts from unknown device/IP
-2025-07-31 11:05,172.16.0.33,Suspicious Process,Medium,Strange binary running as SYSTEM, unknown hash
-2025-07-31 11:10,203.0.113.45,Exploit Attempt,Critical,Alert: CVE exploit attempt against Outlook (port 443)
-
-```
-- For more advanced SOC scenarios, just swap the sample with the full assets/alerts.csv file. Contributions for even more alert types are welcome!
+## 📁 Folder Structure
+    SOC-L1-SimLab/
+    ├── data/
+    │ ├── alerts.csv # All active/archived incident data
+    │ └── tickets.csv # Your triage history (auto-generated)
+    ├── src/
+    │ ├── dashboard.py # Main alert dashboard, updated war room UI
+    │ ├── utils/
+    │ │ └── data_utils.py
+    │ └── pages/
+    │ ├── 01_Progress.py
+    │ ├── 02_Ticket_Log.py
+    │ ├── 03_Investigation.py
+    │ ├── 04_About.py
+    │ └── 05_Terminal_About.py
 
 
-## **🛠 Why This Design?**
+## 🗃️ How It Works
 
-- **Looks and feels like a real L1 SOC desk:** Fast triage, simple documentation, immediate feedback.
-- **CSV for customization:** Swap in your own scenarios, use in demos, or extend with minimal setup.
-- **No fluff—just skills:** Focus on decisions, learning, and documentation. The stuff that makes good analysts great.
+1. **Alerts:** Each incident is a card—explore summary & more details; nothing is obvious, just like a real SOC.
+2. **Investigate:** Click "Investigate" to access a focused triage portal. Read, research, decide, and document.
+3. **Action:** Choose: Escalate, Close as FP, or Request More Info. You must justify your reasoning.
+4. **Record:** Decisions go to your ticket log, with rigorous feedback—so you learn, fast.
+5. **Progress:** See summary stats, re-review cases, and always know which incidents remain.
 
-## **👋 Contributing / License**
+## 🧑💻 For Learners, By a Learner
 
-> PRs welcome! Built for learning, training, and interviews. MIT License. 
-> Built for SOC beginners — your feedback and contributions can help make it even better. 
+> “From brute-forcing the basics to building blue team platforms—this is for all digital explorers who believe you learn by doing. No flashy badges, no spoilers—just pure analyst growth.”
 
+- **Builder:** [kartavyaojha](https://github.com/kartavyaojha)  
+- **Contact:** kartavya9977@gmail.com  
+- **Connect:** [LinkedIn](https://www.linkedin.com/in/kartavya-ojha)  
+- _“Never stop poking, breaking, or building—the frontline welcomes all.”_
 
+## 📄 Custom Alerts
 
+_Edit or extend `data/alerts.csv` for new scenarios. Columns:_
+timestamp,source_ip,destination_ip,username,event_type,severity,description,is_false_positive,asset,location,detection_tool,raw_log
 
+Check the included CSV examples for full structure and realism.
 
+## 🛡️ Why This Design?
 
+- **No shortcuts. No spoilers.** Events are ambiguous—investigation required, not just guessing.
+- **UI built for focus:** The war room grid, investigation pages, and logs support real analyst workflow.
+- **Open source, modern, and ready for the next wave of blue teamers.**
 
+## ⚡ Want to Contribute or Chat?
 
+Pull requests, new alert data, workflow ideas, and CTF-style challenge contributions are all welcome!  
+_This is your space to make analyst training more real and rewarding for all._
 
+## 📜 License
 
+MIT License — always free, for learning and for learners.
 
+---
 
+**Welcome to the field. Triage is open.**
 
-
-
-
-
-
-
-
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-%E2%9C%94-green)
+---
+![GitHub repo size](https://img.shields.io/github/repo-size/kartavyaojha/SOC-L1-SimLab?color=brightgreen)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-ff4b4b?logo=streamlit)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Issues](https://img.shields.io/github/issues/kartavyaojha/SOC-L1-SimLab?color=blue)
 
