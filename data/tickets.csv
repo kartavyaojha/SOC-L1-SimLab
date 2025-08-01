@@ -1,0 +1,3 @@
+ticket_id,alert_idx,timestamp,event_type,action,notes,status,time_handled,correct,source_ip,destination_ip,username,asset,location,detection_tool,raw_log
+eca77497-b0a5-40d3-b0bd-5cba32cdeb88,0,2025-07-31 10:00,Brute-force,Escalate,its an hacker,Open,2025-08-01 10:48:08 UTC,True,192.168.1.100,10.0.0.22,alice,web01,Delhi,IDS,"[2025-07-31 10:00] sshd: Failed logins from 192.168.1.100 for alice: 5 failures, 1 success"
+726406e9-270c-41b1-b43f-75ff43355c8c,1,2025-08-01 09:22,Failed MFA Attempt,Close as False Positive,its a regular,Closed,2025-08-01 10:52:26 UTC,True,192.168.4.200,,sara,workstation5,San Francisco,AuthServer,"[2025-08-01 09:22] User sara failed MFA 3 times, success on 4th attempt"
